@@ -4,9 +4,11 @@ WORKDIR /mattermost
 VOLUME ["/mattermost/data", "/mattermost/config"]
 EXPOSE 80
 
-ADD https://releases.mattermost.com/2.1.0/mattermost-team-2.1.0-linux-amd64.tar.gz /
-RUN tar -C / -xzvf /mattermost-team-2.1.0-linux-amd64.tar.gz --no-same-owner \
-	&& rm -rf /mattermost-team-2.1.0-linux-amd64.tar.gz
+ENV MATTERMOST_VERSION 2.1.0
+
+ADD https://releases.mattermost.com/${MATTERMOST_VERSION}/mattermost-team-${MATTERMOST_VERSION}-linux-amd64.tar.gz /
+RUN tar -C / -xzf /mattermost-team-${MATTERMOST_VERSION}-linux-amd64.tar.gz --no-same-owner \
+	&& rm -rf /mattermost-team-${MATTERMOST_VERSION}-linux-amd64.tar.gz
 
 COPY config.json /mattermost/config/
 
