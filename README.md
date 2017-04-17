@@ -4,7 +4,8 @@ Mattermost is an open source, self-hosted Slack-alternative
 
 ## Versions
 
-* `3`, `3.7`, `3.7.1`, `latest`
+* `3`, `3.8`, `3.8.0`, `latest`
+* `3.7`, `3.7.1`
 * `3.6`, `3.6.2`
 * `3.5`, `3.5.0`
 * `3.4`, `3.4.0`
