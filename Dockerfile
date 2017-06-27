@@ -4,7 +4,7 @@ WORKDIR /mattermost
 VOLUME ["/mattermost/data", "/mattermost/config"]
 EXPOSE 80
 
-ENV MATTERMOST_VERSION 3.9.0
+ENV MATTERMOST_VERSION 3.10.0
 
 ADD https://releases.mattermost.com/${MATTERMOST_VERSION}/mattermost-team-${MATTERMOST_VERSION}-linux-amd64.tar.gz /
 RUN tar -C / -xzf /mattermost-team-${MATTERMOST_VERSION}-linux-amd64.tar.gz --no-same-owner && \
